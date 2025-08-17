@@ -174,7 +174,7 @@ const AboutSection = () => (
   </section>
 );
 
-const MenuPdf = "/menus/Osaka-Menu.pdf";
+const MenuPdf = "menus/Osaka-Menu.pdf";
 
 // --- MenuSection with Image Carousel ---
 const MenuSection = () => {
