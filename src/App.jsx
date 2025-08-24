@@ -74,7 +74,7 @@ const InstagramIcon = ({ className }) => (
 );
 
 // --- COLOR CONSTANTS ---
-const ACCENT_COLOR = "#cd2424";
+const ACCENT_COLOR = "#9c0505";
 const TEXT_COLOR = "#333333";
 const BG_LIGHT = "#f7f7f7ff";
 const BG_DARK = "#2a2a2a";
@@ -94,7 +94,7 @@ const SocialSidebar = () => (
       href="https://www.facebook.com/oosakarestaurant"
       target="_blank"
       rel="noopener noreferrer"
-      className="text-gray-400 hover:text-[#cd2424] transition-colors"
+      className="text-gray-400 hover:text-[#9c0505] transition-colors"
     >
       <FacebookIcon className="w-6 h-6 fill-current" />
     </a>
@@ -102,7 +102,7 @@ const SocialSidebar = () => (
       href="https://www.instagram.com/oosaka.restaurant/"
       target="_blank"
       rel="noopener noreferrer"
-      className="text-gray-400 hover:text-[#cd2424] transition-colors"
+      className="text-gray-400 hover:text-[#9c0505] transition-colors"
     >
       <InstagramIcon className="w-6 h-6 fill-current" />
     </a>
@@ -117,7 +117,7 @@ const NavLink = ({ href, children, onClick, isActive }) => (
     className={`inline-block px-2 py-2 uppercase tracking-widest transition-colors duration-300 text-sm font-medium border-b-2 ${
       isActive
         ? "text-[#cd2424] border-[#cd2424]"
-        : "text-[#333333] border-transparent hover:text-[#cd2424]"
+        : "text-[#333333] border-transparent hover:text-[#9c0505]"
     }`}
     style={isActive ? { color: ACCENT_COLOR, borderColor: ACCENT_COLOR } : {}}
   >
@@ -353,7 +353,7 @@ const ContactSection = () => {
                   id="name"
                   name={FIELD_NAME}
                   required
-                  className="w-full bg-gray-100 text-gray-800 rounded border border-gray-300 focus:border-[#cd2424] focus:ring-2 focus:ring-[#cd2424]/50 p-3 outline-none transition-colors"
+                  className="w-full bg-gray-100 text-gray-800 rounded border border-gray-300 focus:border-[#9c0505] focus:ring-2 focus:ring-[#cd2424]/50 p-3 outline-none transition-colors"
                 />
               </div>
               <div className="mb-4">
@@ -365,7 +365,7 @@ const ContactSection = () => {
                   id="email"
                   name={FIELD_EMAIL}
                   required
-                  className="w-full bg-gray-100 text-gray-800 rounded border border-gray-300 focus:border-[#cd2424] focus:ring-2 focus:ring-[#cd2424]/50 p-3 outline-none transition-colors"
+                  className="w-full bg-gray-100 text-gray-800 rounded border border-gray-300 focus:border-[#9c0505] focus:ring-2 focus:ring-[#cd2424]/50 p-3 outline-none transition-colors"
                 />
               </div>
               <div className="mb-6">
@@ -377,13 +377,13 @@ const ContactSection = () => {
                   name={FIELD_MESSAGE}
                   rows="5"
                   required
-                  className="w-full bg-gray-100 text-gray-800 rounded border border-gray-300 focus:border-[#cd2424] focus:ring-2 focus:ring-[#cd2424]/50 p-3 outline-none transition-colors"
+                  className="w-full bg-gray-100 text-gray-800 rounded border border-gray-300 focus:border-[#9c0505] focus:ring-2 focus:ring-[#cd2424]/50 p-3 outline-none transition-colors"
                 ></textarea>
               </div>
               <button
                 type="submit"
                 disabled={sending}
-                className="w-full font-bold py-3 px-6 rounded-lg transition-colors"
+                className="w-full font-bold py-3 px-6 rounded-lg transition-colors hover:opacity-90"
                 style={{ background: ACCENT_COLOR, color: "#fff" }}
               >
                 {sending ? "Sending..." : "Send"}
@@ -435,7 +435,7 @@ const Footer = () => (
           href="https://www.facebook.com/oosakarestaurant"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-400 hover:text-[#cd2424] transition-colors"
+          className="text-gray-400 hover:text-[#9c0505] transition-colors"
         >
           <FacebookIcon className="w-5 h-5 fill-current" />
         </a>
@@ -443,7 +443,7 @@ const Footer = () => (
           href="https://www.instagram.com/oosaka.restaurant/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-400 hover:text-[#cd2424] transition-colors"
+          className="text-gray-400 hover:text-[#9c0505] transition-colors"
         >
           <InstagramIcon className="w-5 h-5 fill-current" />
         </a>
