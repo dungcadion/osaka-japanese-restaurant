@@ -137,6 +137,7 @@ const HomeSection = () => (
       <img
         src={heroLogo}
         alt="Osaka Japanese Restaurant Logo"
+        loading="lazy"
         className="w-full filter drop-shadow-lg"
       />
       <p 
@@ -155,6 +156,7 @@ const AboutSection = () => (
           <img
             src={aboutImgUrl}
             alt="Osaka Japanese Restaurant Exterior"
+            loading="lazy"
             className="rounded-lg shadow-2xl w-full h-auto object-cover"
           />
         </div>
@@ -223,6 +225,7 @@ const MenuSection = () => {
                                             <img
                                                 src={src}
                                                 alt={`Menu item ${index + 1}`}
+                                                loading="lazy"
                                                 className="w-full"
                                             />
                                         </div>
@@ -278,6 +281,7 @@ const GallerySection = () => {
                   <img
                     src={src}
                     alt={`Gallery image ${index + 1}`}
+                    loading="lazy"
                     className="w-full h-[300px] md:h-[500px] object-cover"
                   />
                 </div>
@@ -512,6 +516,7 @@ export default function App() {
             <img
               src={logoUrl}
               alt="Osaka Japanese Restaurant Logo"
+              loading="lazy"
               className="h-10 w-10 md:h-12 md:w-12"
             />
             <span
