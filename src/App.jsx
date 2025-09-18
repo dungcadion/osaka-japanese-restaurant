@@ -366,6 +366,39 @@ const FIELD_NAME = "entry.1328113499";
 const FIELD_EMAIL = "entry.136181805";
 const FIELD_MESSAGE = "entry.516002430";
 
+// --- NEW OperatingHours Component ---
+const OperatingHours = () => {
+  const hoursData = [
+    { day: "Sunday", hours: "12–3 PM, 5–10 PM" },
+    { day: "Monday", hours: "Closed" },
+    { day: "Tuesday", hours: "12–3 PM, 5–10 PM" },
+    { day: "Wednesday", hours: "12–3 PM, 5–10 PM" },
+    { day: "Thursday", hours: "12–3 PM, 5–10 PM" },
+    { day: "Friday", hours: "12–3 PM, 5–10 PM" },
+    { day: "Saturday", hours: "12–3 PM, 5–10 PM" },
+  ];
+
+  const todayIndex = new Date().getDay();
+
+  return (
+    <div className="text-lg space-y-1">
+      {hoursData.map((item, index) => {
+        const isToday = index === todayIndex;
+        const todayClass = isToday
+          ? `font-bold text-[${ACCENT_COLOR}]`
+          : "text-gray-600";
+
+        return (
+          <div key={item.day} className={`flex ${todayClass}`}>
+            <span className="w-28">{item.day}</span>
+            <span>{item.hours}</span>
+          </div>
+        );
+      })}
+    </div>
+  );
+};
+
 const ContactSection = () => {
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
@@ -498,8 +531,8 @@ const ContactSection = () => {
               >
                 Hours
               </h3>
-              <p className="text-lg">Tuesday - Sunday: 11am - 10pm</p>
-              <p className="text-lg">Monday: Closed</p>
+              {/* --- UPDATED PART --- */}
+              <OperatingHours />
             </div>
             <div className="h-64 lg:h-80 w-full rounded-lg overflow-hidden">
               <iframe
