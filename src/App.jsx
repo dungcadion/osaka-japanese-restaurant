@@ -369,13 +369,13 @@ const FIELD_MESSAGE = "entry.516002430";
 // --- NEW OperatingHours Component ---
 const OperatingHours = () => {
   const hoursData = [
-    { day: "Sunday", hours: "12–3 PM, 5–10 PM" },
+    { day: "Sunday", hours: "11–2 PM, 5–10 PM" },
     { day: "Monday", hours: "Closed" },
-    { day: "Tuesday", hours: "12–3 PM, 5–10 PM" },
-    { day: "Wednesday", hours: "12–3 PM, 5–10 PM" },
-    { day: "Thursday", hours: "12–3 PM, 5–10 PM" },
-    { day: "Friday", hours: "12–3 PM, 5–10 PM" },
-    { day: "Saturday", hours: "12–3 PM, 5–10 PM" },
+    { day: "Tuesday", hours: "11–2 PM, 5–10 PM" },
+    { day: "Wednesday", hours: "11–2 PM, 5–10 PM" },
+    { day: "Thursday", hours: "11–2 PM, 5–10 PM" },
+    { day: "Friday", hours: "11–2 PM, 5–10 PM" },
+    { day: "Saturday", hours: "11–2 PM, 5–10 PM" },
   ];
 
   const todayIndex = new Date().getDay();
