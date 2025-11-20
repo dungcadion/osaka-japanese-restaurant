@@ -1,6 +1,13 @@
 import React, { useState, useEffect, useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
-import { Menu as MenuIcon, X, ArrowLeft, ArrowRight } from "lucide-react";
+import {
+  Menu as MenuIcon,
+  X,
+  ArrowLeft,
+  ArrowRight,
+  Phone,
+  Mail,
+} from "lucide-react";
 
 // --- Local Image Imports ---
 import myLogo from "./assets/images/logo.svg";
@@ -67,7 +74,7 @@ const InstagramIcon = ({ className }) => (
     xmlns="http://www.w3.org/2000/svg"
   >
     <title>Instagram</title>
-    <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.784.305-1.457.717-2.126 1.385C1.344 2.683.93 3.357.63 4.14c-.3.765-.5 1.635-.558 2.913C.015 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.26 2.148.558 2.913.3.784.717 1.457 1.385 2.126.67.67 1.344 1.077 2.126 1.385.765.3 1.635.5 2.913.558C8.333 23.985 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.26 2.913-.558.784-.3 1.457-.717 2.126-1.385.67-.67 1.077-1.344 1.385-2.126.3-.765-.5-1.635.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.26-2.148-.558-2.913-.3-.784-.717-1.457-1.385-2.126C21.317 1.344 20.643.93 19.86.63c-.765-.3-1.635-.5-2.913-.558C15.667.015 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.013 3.584-.07 4.849c-.053 1.17-.249 1.805-.413 2.227-.217.562-.477.96-.896 1.382-.42.419-.82.679-1.381.896-.422.164-1.057.36-2.227.413C8.415 2.176 8.797 2.16 12 2.16zm0 3.39c-3.405 0-6.16 2.755-6.16 6.16s2.755 6.16 6.16 6.16 6.16-2.755 6.16-6.16-2.755-6.16-6.16-6.16zm0 10.16c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.44.645-1.44 1.44s.645 1.44 1.44 1.44c.795 0 1.44-.645 1.44-1.44s-.645-1.44-1.44-1.44z" />
+    <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.784.305-1.457.717-2.126 1.385C1.344 2.683.93 3.357.63 4.14c-.3.765-.5 1.635-.558 2.913C.015 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.26 2.148.558 2.913.3.784.717 1.457 1.385 2.126.67.67 1.344 1.077 2.126 1.385.765.3 1.635.5 2.913.558C8.333 23.985 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.26 2.913-.558.784-.3 1.457-.717 2.126-1.385.67-.67 1.077-1.344 1.385-2.126.3-.765.5-1.635.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.26-2.148-.558-2.913-.3-.784-.717-1.457-1.385-2.126C21.317 1.344 20.643.93 19.86.63c-.765-.3-1.635-.5-2.913-.558C15.667.015 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.013 3.584-.07 4.849c-.053 1.17-.249 1.805-.413 2.227-.217.562-.477.96-.896 1.382-.42.419-.82.679-1.381.896-.422.164-1.057.36-2.227.413C8.415 2.176 8.797 2.16 12 2.16zm0 3.39c-3.405 0-6.16 2.755-6.16 6.16s2.755 6.16 6.16 6.16 6.16-2.755 6.16-6.16-2.755-6.16-6.16-6.16zm0 10.16c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.44.645-1.44 1.44s.645 1.44 1.44 1.44c.795 0 1.44-.645 1.44-1.44s-.645-1.44-1.44-1.44z" />
   </svg>
 );
 
@@ -536,7 +543,7 @@ const ContactSection = () => {
             </div>
             <div className="h-64 lg:h-80 w-full rounded-lg overflow-hidden">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d123238.90185254999!2d120.55939109999998!3d15.1464952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3396f3ce9aaccd9f%3A0x2ffd59ee507506b5!2sOsaka%20Japanese%20Restaurant!5e0!3m2!1sen!2sph!4v1755328567822!5m2!1sen!2sph"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3851.216112902587!2d120.5573954433203!3d15.146471566420342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3396f314b4c2cd3f%3A0xb15c30c1060444f1!2sThe%20Friendship%20Pub!5e0!3m2!1sen!2sph!4v1754562554718!5m2!1sen!2sph"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -555,9 +562,29 @@ const ContactSection = () => {
 const Footer = () => (
   <footer
     style={{ background: "#fff", color: "#333333" }}
-    className="py-3 border-t border-gray-200"
+    className="py-8 border-t border-gray-200"
   >
-    <div className="container mx-auto px-6 lg:px-8 text-center">
+    <div className="container mx-auto px-6 lg:px-8 flex flex-col items-center gap-6">
+      {/* --- NEW Contact Info Section --- */}
+      <div className="flex flex-col md:flex-row gap-6 md:gap-12 items-center justify-center text-sm md:text-base">
+        <a
+          href="tel:+639278327283"
+          className="flex items-center gap-3 text-[#333333] hover:text-[#9c0505] transition-colors"
+        >
+          <Phone size={20} style={{ color: "#9c0505" }} />
+          <span>+63 927 832 7283</span>
+        </a>
+        <a
+          href="mailto:therestaurant.osaka@gmail.com"
+          className="flex items-center gap-3 text-[#333333] hover:text-[#9c0505] transition-colors"
+        >
+          <Mail size={20} style={{ color: "#9c0505" }} />
+          <span>therestaurant.osaka@gmail.com</span>
+        </a>
+      </div>
+
+      <div className="w-full border-t border-gray-200 my-2"></div>
+
       <p>
         © {new Date().getFullYear()} Osaka Japanese Restaurant. All Rights
         Reserved.
