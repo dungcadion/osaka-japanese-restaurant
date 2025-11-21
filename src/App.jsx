@@ -543,7 +543,7 @@ const ContactSection = () => {
             </div>
             <div className="h-64 lg:h-80 w-full rounded-lg overflow-hidden">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3851.216112902587!2d120.5573954433203!3d15.146471566420342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3396f314b4c2cd3f%3A0xb15c30c1060444f1!2sThe%20Friendship%20Pub!5e0!3m2!1sen!2sph!4v1754562554718!5m2!1sen!2sph"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16048.609309176636!2d120.53960883928916!3d15.150817302925121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3396f3ce9aaccd9f%3A0x2ffd59ee507506b5!2sOsaka%20Japanese%20Restaurant!5e1!3m2!1sen!2sph"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
